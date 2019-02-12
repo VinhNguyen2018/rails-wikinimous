@@ -1,0 +1,17 @@
+<div class="container text-center">
+  <div class="title text-center">
+    <h1><%= @article.title %></h1>
+    <%= link_to edit_article_path(@article) do %>
+      <i class="fas fa-pen-fancy"></i>
+    <% end %>
+    <%= link_to article_path(@article), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <i class="fas fa-dumpster"></i>
+    <% end %>
+  </div>
+  <p><%= @article.content %></p>
+</div>
+
+
+
+
+
